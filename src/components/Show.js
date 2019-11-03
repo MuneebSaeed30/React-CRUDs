@@ -28,10 +28,10 @@ class Show extends Component {
 
   delete(id){
     firebase.firestore().collection('notes').doc(id).delete().then(() => {
-      alert("Document successfully deleted!");
+      alert("Note successfully deleted!");
       this.props.history.push("/")
     }).catch((error) => {
-      console.error("Error removing document: ", error);
+      console.error("Error removing note: ", error);
     });
   }
 

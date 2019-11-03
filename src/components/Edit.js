@@ -54,7 +54,7 @@ class Edit extends Component {
       this.props.history.push("/show/"+this.props.match.params.id)
     })
     .catch((error) => {
-      console.error("Error adding document: ", error);
+      alert("Error updating note: ", error);
     });
   }
 
